@@ -1,0 +1,10 @@
+<h1>My Artist: <%=@artist.name%></h1>
+<p>My artist bio: <%=@artist.bio%></p>
+<h3>Songs by this artist:</h3>
+    <% @artist.songs.each do |song| %>
+        <li><%= song.name %></li>
+    <% end %>
+<h3>Genres this artist sings in:</h3>
+    <% @artist.genres.each do |genre| %>
+        <li><%= genre.name %></li>
+    <% end %>
